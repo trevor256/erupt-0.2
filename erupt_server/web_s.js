@@ -7,7 +7,7 @@ http.createServer(function (request, response) {
 
     var filePath = '.' + request.url;
     if (filePath == './') {
-        filePath = './index.html';
+        filePath = './Erupt.html';
     }
 
     var extname = String(path.extname(filePath)).toLowerCase();
@@ -50,5 +50,5 @@ http.createServer(function (request, response) {
         }
     });
 
-}).listen(8125);
-console.log('Server running at http://127.0.0.1:8125/');
+}).listen(8080);
+console.log('Server running at http://127.0.0.1:8080/');
