@@ -1,11 +1,10 @@
-# erupt
-Godot game using ws &amp; nodejs for server communication
+# Erupt Game & Server
+Erupt is a web based game using Godot and nodejs for server.
+
+1. File Structure
+2. Process
 
 
-1. First item
-2. Second item
-3. Third item
-4. Fourth item
+:file_folder:erupt, has the Godot game engine project
 
-using mongoDB for database
-<span style="color:blue">some *blue* text</span>.
+:file_folder:erupt_server, has the node_modules, game files, and 1es.js
