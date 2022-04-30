@@ -1,7 +1,7 @@
 extends MarginContainer
 
 func _ready():
-	$HBoxContainer/VBoxContainer/VBoxContainer/StartButton.grab_focus()
+	$HBox/VB/StartButton.grab_focus()
 
 
 func _on_StartButton_pressed():
