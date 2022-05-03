@@ -1,0 +1,163 @@
+{
+	"connections": [
+		{
+			"from": "pattern_2",
+			"from_port": 0,
+			"to": "blend",
+			"to_port": 1
+		},
+		{
+			"from": "pattern",
+			"from_port": 0,
+			"to": "blend",
+			"to_port": 0
+		},
+		{
+			"from": "runes",
+			"from_port": 0,
+			"to": "blend_2",
+			"to_port": 1
+		},
+		{
+			"from": "blend",
+			"from_port": 0,
+			"to": "blend_2",
+			"to_port": 0
+		},
+		{
+			"from": "blend_2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 0
+		},
+		{
+			"from": "perlin",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 2
+		}
+	],
+	"label": "Graph",
+	"longdesc": "",
+	"name": "267",
+	"node_position": {
+		"x": 0,
+		"y": 0
+	},
+	"nodes": [
+		{
+			"export_paths": {
+				"Godot": "/home/trevor/Desktop/erupt 0.1/test/TestTexture"
+			},
+			"name": "Material",
+			"node_position": {
+				"x": 618.313721,
+				"y": 185.305435
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1,
+					"b": 1,
+					"g": 1,
+					"r": 1,
+					"type": "Color"
+				},
+				"ao": 1,
+				"depth_scale": 0.14,
+				"emission_energy": 1,
+				"flags_transparent": false,
+				"metallic": 0,
+				"normal": 1,
+				"roughness": 1,
+				"size": 11,
+				"sss": 0
+			},
+			"type": "material"
+		},
+		{
+			"name": "pattern",
+			"node_position": {
+				"x": -293.429626,
+				"y": 162.907425
+			},
+			"parameters": {
+				"mix": 4,
+				"x_scale": 4,
+				"x_wave": 2,
+				"y_scale": 4,
+				"y_wave": 2
+			},
+			"type": "pattern"
+		},
+		{
+			"name": "pattern_2",
+			"node_position": {
+				"x": -250.266647,
+				"y": 310.122223
+			},
+			"parameters": {
+				"mix": 4,
+				"x_scale": 1,
+				"x_wave": 2,
+				"y_scale": 1,
+				"y_wave": 2
+			},
+			"type": "pattern"
+		},
+		{
+			"name": "blend",
+			"node_position": {
+				"x": 6.816612,
+				"y": 127.338585
+			},
+			"parameters": {
+				"amount": 0.3,
+				"blend_type": 4
+			},
+			"type": "blend"
+		},
+		{
+			"name": "runes",
+			"node_position": {
+				"x": 65.915154,
+				"y": 397.256866
+			},
+			"parameters": {
+				"columns": 8,
+				"rows": 8
+			},
+			"type": "runes"
+		},
+		{
+			"name": "blend_2",
+			"node_position": {
+				"x": 262.936768,
+				"y": 163.100128
+			},
+			"parameters": {
+				"amount": 1,
+				"blend_type": 6
+			},
+			"type": "blend"
+		},
+		{
+			"name": "perlin",
+			"node_position": {
+				"x": 314.706512,
+				"y": 322.489258
+			},
+			"parameters": {
+				"iterations": 3,
+				"persistence": 0.5,
+				"scale_x": 4,
+				"scale_y": 4
+			},
+			"type": "perlin"
+		}
+	],
+	"parameters": {
+
+	},
+	"shortdesc": "",
+	"type": "graph"
+}
