@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://e52h6apr3xu"
-path="res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex"
+uid="uid://cav1r41vv4ayb"
+path="res://.godot/imported/wooden_crate_01_arm_2k.jpg-a5179b750f1920f93bb40cf787d306fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=["res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex"]
+source_file="res://test/textures/wooden_crate_01_arm_2k.jpg"
+dest_files=["res://.godot/imported/wooden_crate_01_arm_2k.jpg-a5179b750f1920f93bb40cf787d306fa.ctex"]
 
 [params]
 
