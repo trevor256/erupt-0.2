@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dcq0fky146vwt"]
+[gd_scene load_steps=12 format=3 uid="uid://dcq0fky146vwt"]
 
 [ext_resource type="Material" uid="uid://cuq8g8irpd47" path="res://test/TestTexture.tres" id="1_xgvkp"]
 [ext_resource type="PackedScene" uid="uid://dq5od81iih2eo" path="res://test/wooden_crate_01_2k.gltf" id="4_jfo5s"]
@@ -9,18 +9,28 @@
 material = ExtResource( "1_xgvkp" )
 size = Vector3(5, 1, 5)
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hauli"]
+sky_top_color = Color(0.0980392, 0.141176, 0.168627, 1)
+sky_horizon_color = Color(0.270588, 0.121569, 0.12549, 1)
+sky_curve = 0.0494816
+sky_cover_modulate = Color(0.0156863, 0.0156863, 0.0156863, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0.270588, 0.121569, 0.12549, 1)
+
+[sub_resource type="Sky" id="Sky_h2dbo"]
+sky_material = SubResource( "ProceduralSkyMaterial_hauli" )
+radiance_size = 1
+
 [sub_resource type="Environment" id="Environment_cp4pn"]
+background_mode = 2
 background_color = Color(0.0980392, 0.0980392, 0.0980392, 1)
-reflected_light_source = 2
-ssr_enabled = true
-ssr_depth_tolerance = 16.4
-ssil_enabled = true
-ssil_radius = 6.43
-ssil_intensity = 1.59
+sky = SubResource( "Sky_h2dbo" )
+ambient_light_color = Color(0.270588, 0.121569, 0.12549, 1)
+ssao_enabled = true
+ssao_intensity = 3.0
 sdfgi_enabled = true
 sdfgi_use_occlusion = true
-glow_intensity = 5.47
-volumetric_fog_enabled = true
+glow_enabled = true
 volumetric_fog_density = 0.2
 volumetric_fog_albedo = Color(0.247059, 0.290196, 0.34902, 1)
 volumetric_fog_emission = Color(0.156863, 0.156863, 0.156863, 1)
@@ -54,17 +64,6 @@ gi_mode = 1
 mesh = SubResource( "BoxMesh_f8f4c" )
 metadata/_edit_lock_ = true
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.805215, 0.457811, -0.37688, 0, 0.635566, 0.772046, 0.592983, -0.621663, 0.511767, -1.10926, 2.70532, 0.248006)
-light_energy = 0.5
-light_bake_mode = 1
-shadow_enabled = true
-shadow_blur = 0.65
-directional_shadow_mode = 1
-directional_shadow_split_1 = 0.019
-directional_shadow_blend_splits = true
-sky_mode = 1
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( "Environment_cp4pn" )
 
@@ -81,7 +80,7 @@ libraries = {
 }
 
 [node name="antique_katana_01_1k" parent="." instance=ExtResource( "4_uqeli" )]
-transform = Transform3D(-0.433854, -0.864353, -0.254292, 0.268492, -0.393447, 0.879268, -0.860048, 0.313199, 0.40277, 0.586418, 0.644466, -0.434006)
+transform = Transform3D(-0.61256, -0.761114, -0.213249, 0.243829, -0.438588, 0.864979, -0.751876, 0.477856, 0.454242, 0.586418, 0.648968, -0.434006)
 
 [node name="rock_moss_set_01_2k" parent="." instance=ExtResource( "4_vecwu" )]
 transform = Transform3D(0.369191, -0.00501774, 0.337154, 0.0037052, 0.499975, 0.00338367, -0.337171, 0, 0.36921, 0.143508, 0.324658, 0.0178587)
@@ -93,6 +92,7 @@ transform = Transform3D(-0.51417, 0, -0.857688, 0, 1, 0, 0.857688, 0, -0.51417, 
 transform = Transform3D(-0.370658, 0.443681, 0.815942, 0.106226, -0.852502, 0.511817, 0.922675, 0.276383, 0.268856, 0.252277, 0.82637, -1.1254)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(0.805215, 0.45781, -0.37688, 0, 0.635566, 0.772047, 0.592983, -0.621663, 0.511767, 1.07604, 0.620856, 0.0401345)
-light_color = Color(1, 0.172549, 0.0470588, 1)
+transform = Transform3D(0.805215, 0.45781, -0.37688, 0, 0.635566, 0.772046, 0.592983, -0.621663, 0.511768, 0.465334, 0.756991, -0.431592)
 shadow_enabled = true
+shadow_bias = 0.02
+omni_range = 4.6
